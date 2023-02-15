@@ -1,5 +1,7 @@
 @echo off
 
+del C:\Users\niclas\AppData\Local\Temp\*.png
+
 set PYTHON=
 set GIT=
 set VENV_DIR=
