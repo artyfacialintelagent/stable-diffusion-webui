@@ -163,7 +163,7 @@ def draw_grid_annotations(im, width, height, hor_texts, ver_texts, margin=0):
 
             draw_y += line.size[1] + line_spacing
 
-    fontsize = (width + height) // 25
+    fontsize = height // 15
     line_spacing = fontsize // 2
 
     fnt = get_font(fontsize)
@@ -171,7 +171,7 @@ def draw_grid_annotations(im, width, height, hor_texts, ver_texts, margin=0):
     color_active = (0, 0, 0)
     color_inactive = (153, 153, 153)
 
-    pad_left = 0 if sum([sum([len(line.text) for line in lines]) for lines in ver_texts]) == 0 else width * 3 // 4
+    pad_left = 0 if sum([sum([len(line.text) for line in lines]) for lines in ver_texts]) == 0 else height // 2
 
     cols = im.width // width
     rows = im.height // height
